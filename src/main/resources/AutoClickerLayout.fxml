@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<fx:root maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="222.0" prefWidth="373.0" style="-fx-background-color: #272829; -fx-border-color: linear-gradient(to right bottom, #2f9dd4, #00e1ff); -fx-border-width: 1;" type="AnchorPane" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <AnchorPane fx:id="toolBar" layoutX="239.0" layoutY="78.0" prefHeight="30.0" prefWidth="200.0" style="-fx-background-color: #18191a;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Text layoutX="35.0" layoutY="21.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-fill: linear-gradient(to right bottom, #2f9dd4, #00e1ff);" text="Volt4's Auto Clicker" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="2">
+               <font>
+                  <Font name="Gadugi Bold" size="19.0" />
+               </font>
+            </Text>
+            <AnchorPane fx:id="closeButton" onMouseClicked="#onClose" onMouseEntered="#closeEnter" onMouseExited="#closeExit" prefHeight="24.0" prefWidth="24.0" style="-fx-background-color: linear-gradient(to right bottom, #2f9dd4, #00e1ff); -fx-background-radius: 3;" AnchorPane.rightAnchor="3.0" AnchorPane.topAnchor="3.0">
+               <children>
+                  <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="2.0" AnchorPane.topAnchor="2.0">
+                     <image>
+                        <Image url="close.png" />
+                     </image></ImageView>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="299.0" layoutY="6.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#onDisableEnable" onMouseEntered="#disableEnableEnter" onMouseExited="#disableEnableExit" prefHeight="20.0" prefWidth="100.0" style="-fx-background-color: #282b2e; -fx-background-radius: 5;" AnchorPane.bottomAnchor="3.0" AnchorPane.rightAnchor="57.0" AnchorPane.topAnchor="3.0">
+               <children>
+                  <AnchorPane fx:id="disableEnableBackground" layoutX="34.0" layoutY="33.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="21.0" prefWidth="100.0" style="-fx-background-color: linear-gradient(to right bottom, #e80505, #f04646); -fx-background-radius: 5;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <AnchorPane fx:id="disableEnableForeground" layoutX="-1.0" layoutY="5.0" prefHeight="20.0" prefWidth="101.0" style="-fx-background-radius: 5px; -fx-background-color: #2d3134;" AnchorPane.bottomAnchor="1.0" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="1.0">
+                           <children>
+                              <Text fx:id="disableEnableText" layoutX="14.0" layoutY="13.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-fill: linear-gradient(to right bottom, #e80505, #f04646);" text="Disabled" AnchorPane.leftAnchor="22.0" AnchorPane.topAnchor="0.05078125">
+                                 <font>
+                                    <Font name="Gadugi" size="15.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="minimizeButton" layoutX="354.0" layoutY="13.0" onMouseClicked="#onMinimize" onMouseEntered="#minimizeEnter" onMouseExited="#minimizeExit" prefHeight="24.0" prefWidth="24.0" style="-fx-background-color: linear-gradient(to right bottom, #2f9dd4, #00e1ff); -fx-background-radius: 3;" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="3.0">
+               <children>
+                  <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="2.0" AnchorPane.topAnchor="2.0">
+                     <image>
+                        <Image url="minimize.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+      <Text fill="WHITE" layoutX="38.0" layoutY="81.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Toggle On Button:" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="35.0">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Text>
+      <AnchorPane layoutX="170.0" layoutY="46.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#onToggleOn" onMouseEntered="#toggleOnEnter" onMouseExited="#toggleOnExit" prefHeight="21.0" prefWidth="100.0" style="-fx-background-color: linear-gradient(to right bottom, #2f9dd4, #00e1ff); -fx-background-radius: 5;" AnchorPane.leftAnchor="160.0" AnchorPane.topAnchor="38.0">
+         <children>
+            <AnchorPane fx:id="toggleOnButtonForeground" layoutX="-1.0" layoutY="5.0" prefHeight="20.0" prefWidth="101.0" style="-fx-background-radius: 5px; -fx-background-color: #2d3134;" AnchorPane.bottomAnchor="1.0" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="1.0">
+               <children>
+                  <Text fx:id="toggleOnButtonText" layoutX="14.0" layoutY="13.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-fill: linear-gradient(to right bottom, #2f9dd4, #00e1ff);" text="Button 1" AnchorPane.leftAnchor="22.0" AnchorPane.topAnchor="0.05078125">
+                     <font>
+                        <Font name="Gadugi" size="13.0" />
+                     </font>
+                  </Text>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+      <Text fill="WHITE" layoutX="16.0" layoutY="89.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Toggle Off Button:" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="65.0">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Text>
+      <AnchorPane layoutX="143.0" layoutY="86.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#onToggleOff" onMouseEntered="#toggleOffEnter" onMouseExited="#toggleOffExit" prefHeight="21.0" prefWidth="100.0" style="-fx-background-color: linear-gradient(to right bottom, #2f9dd4, #00e1ff); -fx-background-radius: 5;" AnchorPane.leftAnchor="160.0" AnchorPane.topAnchor="68.0">
+         <children>
+            <AnchorPane fx:id="toggleOffButtonForeground" layoutX="-1.0" layoutY="5.0" prefHeight="20.0" prefWidth="101.0" style="-fx-background-radius: 5px; -fx-background-color: #2d3134;" AnchorPane.bottomAnchor="1.0" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="1.0">
+               <children>
+                  <Text fx:id="toggleOffButtonText" layoutX="14.0" layoutY="13.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-fill: linear-gradient(to right bottom, #2f9dd4, #00e1ff);" text="Button 5" AnchorPane.leftAnchor="22.0" AnchorPane.topAnchor="0.05078125">
+                     <font>
+                        <Font name="Gadugi" size="13.0" />
+                     </font>
+                  </Text>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+      <Text fill="WHITE" layoutX="-2.0" layoutY="122.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Time Between Clicks (ms):" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="100.0">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Text>
+      <TextField fx:id="timeBetweenClicksPrimary" layoutX="100.0" layoutY="156.0" promptText="milliseconds" style="-fx-border-color: linear-gradient(to right bottom, #2f9dd4, #00e1ff); -fx-text-fill: white; -fx-background-color: #272829; -fx-border-radius: 5 5 0 0;" AnchorPane.leftAnchor="185.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="97.0" />
+      <Text fill="WHITE" layoutX="46.0" layoutY="171.0" strokeType="OUTSIDE" strokeWidth="0.0" text="±" AnchorPane.leftAnchor="170.0" AnchorPane.topAnchor="125.0">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Text>
+      <TextField fx:id="timeBetweenClicksSecondary" layoutX="213.0" layoutY="134.0" promptText="random milliseconds" style="-fx-border-color: linear-gradient(to right bottom, #2f9dd4, #00e1ff); -fx-text-fill: white; -fx-background-color: #272829; -fx-border-radius: 0 0 5 5;" AnchorPane.leftAnchor="185.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="122.0" />
+      <Text fill="WHITE" layoutX="15.0" layoutY="182.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Press/Release Delay (ms):" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="160.0">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="±" AnchorPane.leftAnchor="170.0" AnchorPane.topAnchor="185.0">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Text>
+      <TextField fx:id="pressReleasePrimary" promptText="milliseconds" style="-fx-border-color: linear-gradient(to right bottom, #2f9dd4, #00e1ff); -fx-text-fill: white; -fx-background-color: #272829; -fx-border-radius: 5 5 0 0;" AnchorPane.leftAnchor="185.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="157.0" />
+      <TextField fx:id="pressReleaseSecondary" promptText="random milliseconds" style="-fx-border-color: linear-gradient(to right bottom, #2f9dd4, #00e1ff); -fx-text-fill: white; -fx-background-color: #272829; -fx-border-radius: 0 0 5 5;" AnchorPane.leftAnchor="185.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="182.0" />
+   </children>
+</fx:root>
